@@ -40,7 +40,7 @@ class Trie:
                 current = current.words[char] # remove from root if word exists
             current.end = False
 
-    def search_word(self, word): # from https://stackoverflow.com/questions/46038694/implementing-a-trie-to-support-autocomplete-in-python
+    def search_word(self, word):
         """Search if word is in Trie"""
         current = self.root
         for char in word:
@@ -63,10 +63,3 @@ class Trie:
         """List stored words in Trie"""
         for word in list(self.prefix_word(prefix)):
             print(word)
-
-trie = Trie()
-trie.add_word("sebastian")
-trie.add_word("sebastiano")
-trie.add_word("sebas")
-trie.remove_word("sebastian")
-trie.list_words("s")
