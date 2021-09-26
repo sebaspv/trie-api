@@ -4,7 +4,6 @@ import uvicorn
 
 app = FastAPI()
 tree = Trie()
-tree.add_word("manzaneo")
 
 @app.get("/trie")
 async def root():
@@ -37,6 +36,6 @@ async def remove(deleted_word):
 async def verify(word):
     return {"status": tree.verify_word(word)}
 
-    
+
 if __name__ == "__main__":
     uvicorn.run(app, port = 5000)
