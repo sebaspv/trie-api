@@ -59,7 +59,13 @@ class Trie:
                 return # return empty if no words have prefix
         yield from curr.search_words(prefix) # yield words with prefix
 
-    def list_words(self, prefix):
+    def get_prefixes(self, keyword):
+        """Return words as string which starts with keyword"""
+        return list(self.prefix_word(keyword))
+
+    def get_words(self):
         """List stored words in Trie"""
-        for word in list(self.prefix_word(prefix)):
-            print(word)
+        return  list(self.prefix_word(""))
+
+    def display_trie(self):
+        return self.root
