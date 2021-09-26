@@ -66,6 +66,10 @@ class Trie:
     def get_words(self):
         """List stored words in Trie"""
         return  list(self.prefix_word(""))
+    
+    def verify_word(self, word):
+        """Verify if word is in Trie"""
+        return True if word in list(self.prefix_word("")) else False
 
     def display_trie(self):
         return self.root
