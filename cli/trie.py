@@ -23,9 +23,10 @@ def remove(word):
     requests.get(f'http://trie-cli.deta.dev/trie/delete/{word}')
     return f"The word {word} has been removed."
 
-def display(word):
+def display():
     trie_request = requests.get(f'http://trie-cli.deta.dev/trie')
     trie = trie_request.json()['trie']
-    return f"Right now, the trie looks like:\n{str(trie)}"
+    return f"Right now, the trie looks like this: \n{str(trie)}"
+
 if __name__ == "__main__":
     fire.Fire()
