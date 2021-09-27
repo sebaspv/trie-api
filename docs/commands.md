@@ -2,6 +2,7 @@
 
 ### Adding and removing words (add/remove)
 Adding and removing words from the Trie is really simple. You only need the word and the command `(add/remove)`:
+
 ```bash
 # add the word "hello" to the Trie
 python3 trie.py add hello
