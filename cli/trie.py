@@ -2,22 +2,22 @@ import fire
 import requests
 
 def available():
-    available_request = requests.get('http://127.0.0.1:5000/trie/available')
+    available_request = requests.get('http://trie-cli.deta.dev/trie/available')
     available_words = available_request.json()['available']
     if available_words == []:
         return 'There are no words available.'
     return 'The available words are: ' + ', '.join(available_words)
     
 def add(word):
-    requests.get(f'http://127.0.0.1:5000/trie/add/{word}')
+    requests.get(f'http://trie-cli.deta.dev/trie/add/{word}')
     return f"The word {word} has been added."
 
 def remove(word):
-    requests.get(f'http://127.0.0.1:5000/trie/delete/{word}')
+    requests.get(f'http://trie-cli.deta.dev/trie/delete/{word}')
     return f"The word {word} has been removed."
 
 def prefix(prefix):
-    prefix_request = requests.get(f'http://127.0.0.1:5000/trie/prefix/{prefix}')
+    prefix_request = requests.get(f'http://trie-cli.deta.dev/trie/prefix/{prefix}')
     prefix_words = prefix_request.json()['words']
     if prefix_words == []:
         return f'There are no words that start with {prefix}.'
