@@ -8,7 +8,7 @@ tree = Trie()
 @app.get("/trie")
 async def root():
     """Displays the Trie's root as a dictionary"""
-    return tree.display_trie()
+    return {"trie":tree.display_trie()}
 
 @app.get("/trie/available")
 async def keywords():

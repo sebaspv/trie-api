@@ -12,10 +12,6 @@ def add(word):
     requests.get(f'http://trie-cli.deta.dev/trie/add/{word}')
     return f"The word {word} has been added."
 
-def remove(word):
-    requests.get(f'http://trie-cli.deta.dev/trie/delete/{word}')
-    return f"The word {word} has been removed."
-
 def prefix(prefix):
     prefix_request = requests.get(f'http://trie-cli.deta.dev/trie/prefix/{prefix}')
     prefix_words = prefix_request.json()['words']
@@ -23,5 +19,13 @@ def prefix(prefix):
         return f'There are no words that start with {prefix}.'
     return f'The words that start with {prefix} are: ' + ', '.join(prefix_words)
 
+def remove(word):
+    requests.get(f'http://trie-cli.deta.dev/trie/delete/{word}')
+    return f"The word {word} has been removed."
+
+def display(word):
+    trie_request = requests.get(f'http://trie-cli.deta.dev/trie')
+    trie = trie_request.json()['trie']
+    return f"Right now, the trie looks like:\n{str(trie)}"
 if __name__ == "__main__":
     fire.Fire()
