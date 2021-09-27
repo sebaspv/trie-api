@@ -1,4 +1,4 @@
-name: Deploy in Deta
+name: Deploy to Deta
 on: push
 
 jobs:
@@ -7,7 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: BogDAAAMN/deta-deploy-action@v1.0.1
-      with:
-        deta-access-token: ${{ secrets.DETA_TOKEN }}
-        deta-name: trie-cli
-        
+        with:
+          deta-access-token: ${{ secrets.DETA_TOKEN }} #Deta access token https://docs.deta.sh/docs/cli/auth
+          deta-name: 'trie-cli'
