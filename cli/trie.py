@@ -7,11 +7,21 @@ def available():
     if available_words == []:
         return 'There are no words available.'
     return 'The available words are: ' + ', '.join(available_words)
+    
 def add(word):
+    requests.get(f'http://127.0.0.1:5000/trie/add/{word}')
     return f"The word {word} has been added."
 
 def remove(word):
+    requests.get(f'http://127.0.0.1:5000/trie/delete/{word}')
     return f"The word {word} has been removed."
+
+def prefix(prefix):
+    prefix_request = requests.get(f'http://127.0.0.1:5000/trie/prefix/{prefix}')
+    prefix_words = prefix_request.json()['words']
+    if prefix_words == []:
+        return f'There are no words that start with {prefix}.'
+    return f'The words that start with {prefix} are: ' + ', '.join(prefix_words)
 
 if __name__ == "__main__":
     fire.Fire()
