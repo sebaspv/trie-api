@@ -3,7 +3,7 @@
 <h2 align="center"> My take on the Slingshot Take Home Challenge</h2>
 
 <h3 align="center"> <a href="http://trie-cli.deta.dev/trie">💻 API URL</h3>
-<h3 align="center"> <a href="https://sebaspv.github.io/trie-api/#/">​📚 Detailed documentation</h3>
+<h3 align="center"> <a href="https://sebaspv.github.io/trie-api/#/commands">​📚 Detailed documentation</h3>
 
 ## Installation Instructions
 The installation is really straightforward. You only need to clone this repo, install the python requirements and run the CLI.

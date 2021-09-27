@@ -1,7 +1,7 @@
 <h1 align = "center">Here are all of the CLI commands!</h1>
 
-### Adding and removing words (add/delete)
-Adding and removing words from the Trie is really simple. You only need the word and the command `(add/delete)`:
+### Adding and removing words (add/remove)
+Adding and removing words from the Trie is really simple. You only need the word and the command `(add/remove)`:
 ```bash
 # add the word "hello" to the Trie
 python3 trie.py add hello
