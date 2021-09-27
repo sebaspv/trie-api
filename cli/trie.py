@@ -5,8 +5,8 @@ def available():
     available_request = requests.get('http://trie-cli.deta.dev/trie/available')
     available_words = available_request.json()['available']
     if available_words == []:
-        return 'There are no words available.'
-    return 'The available words are: ' + ', '.join(available_words)
+        return 'There are no words in the Trie.'
+    return 'The words inside the Trie are: ' + ', '.join(available_words)
     
 def add(word):
     requests.get(f'http://trie-cli.deta.dev/trie/add/{word}')
