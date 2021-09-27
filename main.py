@@ -25,12 +25,12 @@ async def prefix(prefix):
 @app.get("/trie/add/{added_word}")
 async def add(added_word):
     tree.add_word(added_word)
-    return {"updated":tree.get_words()}
+    return {"available":tree.get_words()}
 
 @app.get("/trie/delete/{deleted_word}")
 async def remove(deleted_word):
     tree.remove_word(deleted_word)
-    return {"updated":tree.get_words()}
+    return {"available":tree.get_words()}
 
 @app.get("/trie/verify/{word}")
 async def verify(word):
