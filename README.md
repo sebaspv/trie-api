@@ -1,6 +1,5 @@
 <h1 align="center">Slingshot Trie CLI</h1>
 
-<h2 align="center"> My take on the Slingshot Take Home Challenge</h2>
 
 <h3 align="center"> <a href="http://trie-cli.deta.dev/trie">💻 API URL</h3>
 <h3 align="center"> <a href="https://sebaspv.github.io/trie-api/#/commands">​📚 Detailed documentation</a></h3>
