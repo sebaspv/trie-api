@@ -1,4 +1,4 @@
-<h1 align="center">Slingshot Trie CLI</h1>
+<h1 align="center">Trie CLI</h1>
 
 
 <h3 align="center"> <a href="http://trie-cli.deta.dev/trie">💻 API URL</h3>
